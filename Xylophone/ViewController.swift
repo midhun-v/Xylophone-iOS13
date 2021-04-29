@@ -23,9 +23,15 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func keyPressed(_ sender: UIButton) {
+    @IBAction func keyPressed(sender: UIButton) {
         
-        playSound(sound: sender.currentTitle!)
+        playSound(sound: (sender.currentTitle!))
+        sender.alpha = 0.5
+        /*let secondsToDelay = 0.2
+        DispatchQueue.main.asyncAfter(deadline: .now() + secondsToDelay) {
+           print("This message is delayed")
+           // Put any code you want to be delayed here
+        }*/
     }
     
 }
